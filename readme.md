@@ -5,11 +5,11 @@ Proyecto desarrollado por el grupo de trabajo Developers .inc
 ---
 
 - ✅ **Integrantes del equipo y roles:**
-    1.   
-    2.  Jose David Fontalvo - 
-    3.  Ana Milena Espinosa Jiménez - Desarrollador
-    4.  Nancy Viviana Espinosa Jiménez - Analista
-    5.  Yoiner Esmith Molina Hurtatiz - Product Owner
+    1.   Jose David Fontalvo - 
+    2.  
+    3. 
+    4.  
+    5.  
 
 ---
 
