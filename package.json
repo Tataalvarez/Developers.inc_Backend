@@ -1,0 +1,31 @@
+{
+  "name": "servidor",
+  "version": "1.0.0",
+  "description": "Proyecto desarrollado por el grupo de trabajo Developers .inc",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/.",
+    "dev": "nodemon src/."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tataalvarez/Developers.inc_Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tataalvarez/Developers.inc_Backend/issues"
+  },
+  "homepage": "https://github.com/Tataalvarez/Developers.inc_Backend#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "apollo-server": "^3.5.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12"
+  }
+}
