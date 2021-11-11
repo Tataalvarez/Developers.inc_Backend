@@ -1,6 +1,6 @@
 const { ApolloServer } = require('apollo-server');
-const typeDefs = require('./db/schema');
-const resolvers = require('./db/resolvers');
+const typeDefs = require('./graphql/schema');
+const resolvers = require('./graphql/resolvers');
 const conectarDB = require('./config/db')
 
 // Conectar a la DB
