@@ -59,18 +59,18 @@ async function newUser(input) {
 async function authUser(input) {
   const { email, password } = input;
   // Si el ususario existe
-  const existsUser = await User.findOne({ email });
+  const existsUser = await User.findOne({ email: email.toLowerCase() });
   if (!existsUser) {
-    throw new Error("El usuario no existe");
+    throw new Error("Error en el email o contraseña");
   }
   // Revisar si el prassword es correcto
   const passwordCorrect = await bcrypt.compare(password, existsUser.password);
   if (!passwordCorrect) {
-    throw new Error("La contraseña es incorrecta");
+    throw new Error("Error en el email o contraseña");
   }
   // Crear el token
   return {
-    token: crearToken(existsUser, process.env.SECRETA, "1h"),
+    token: crearToken(existsUser, process.env.SECRETA, "12h"),
   };
 }
 
