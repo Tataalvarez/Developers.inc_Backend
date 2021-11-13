@@ -9,7 +9,7 @@ Proyecto desarrollado por el grupo de trabajo Developers.inc
     2.   Paulo Richar Mora Noguera -
     3. 
     4.  
-    5.  
+    5.  Marco Fabian Piñeros Hernández - Developer
 
 ---
 
@@ -68,7 +68,8 @@ El aprendizaje autonomo es mi fuerte y en esta serie de cursos he explorado y al
 
 -**** - []()
 
--**** - []()
+-**Marco Fabian Piñeros Hernández** - [MFabian2](https://github.com/MFabian2)
+Soy investigador y estudiante de último semestre de Ingeniería industrial, resido en Bogotá y siempre he estado muy relacionado con el rubro de programación durante mi desarrollo académico por lo que vi en este programa un alto potencial de reforzar y adquirir conocimientos para enriquecer mis habilidades afines y desarrollar buenas prácticas en cuanto al desarrollo.
 
 
 
