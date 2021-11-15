@@ -59,8 +59,8 @@ const typeDefs = gql`
   }
 
   input InscriptionInput {
-    identificador_estudiante: String
-    identificador_proyecto: String
+    identificador_estudiante: String!
+    identificador_proyecto: String!
     estado: String
     fecha_ingreso: String
     fecha_egreso: String
