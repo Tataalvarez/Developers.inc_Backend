@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+
 const AdvanceSchema = mongoose.Schema({
     fecha: {
         type: Date,
@@ -16,14 +17,12 @@ const AdvanceSchema = mongoose.Schema({
     },
 
     proyecto: {
-        type: Schema.Types.ObjectId,
-        ref: ProjectModel,
+        type: String,
         required: true,
       },
 
       creadoPor: {
-        type: Schema.Types.ObjectId,
-        ref: UserModel,
+        type: String,
         required: true,
       },
 

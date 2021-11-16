@@ -25,6 +25,22 @@ const typeDefs = gql`
     creado: String
     duracion: Int
   }
+  type Inscription {
+    id: ID
+    identificador_estudiante: String
+    identificador_proyecto: String
+    estado: String
+    fecha_ingreso: String
+    fecha_egreso: String
+  }
+  type Advance {
+    id: ID
+    fecha: String
+    descripcion: String
+    observaciones: String
+    proyecto: String
+    creadoPor: String
+  }
 
   input UserInput {
     nombre: String!
@@ -49,6 +65,22 @@ const typeDefs = gql`
     duracion: Int
   }
 
+  input InscriptionInput {
+    identificador_estudiante: String!
+    identificador_proyecto: String!
+    estado: String
+    fecha_ingreso: String
+    fecha_egreso: String
+  }
+
+  input AdvanceInput {
+    fecha: String
+    descripcion: String
+    observaciones: String
+    proyecto: String!
+    creadoPor: String! 
+  }
+
   type Query {
     # Users
     getUsers: [User]
@@ -56,6 +88,12 @@ const typeDefs = gql`
     # Projects
     getProjects: [Project]
     getProject(id: ID!): Project
+    # Inscriptions
+    getInscriptions: [Inscription]
+    getInscription(id: ID!): Inscription
+    # Advances
+    getAdvances: [Advance]
+    getAdvance(id: ID!): Advance
   }
   type Mutation {
     # Users
@@ -67,6 +105,14 @@ const typeDefs = gql`
     newProject(input: ProjectInput): Project
     updateProject(id: ID!, input: ProjectInput): Project
     deleteProject(id: ID!): String
+    # Inscriptions
+    newInscription(input: InscriptionInput): Inscription
+    updateInscription(id: ID!, input: InscriptionInput): Inscription
+    deleteInscription(id: ID!): String
+    # Advances
+    newAdvance(input: AdvanceInput): Advance
+    updateAdvance(id: ID!, input: AdvanceInput): Advance
+    deleteAdvance(id: ID!): String
   }
 `;
 
