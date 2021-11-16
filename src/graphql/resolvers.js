@@ -24,12 +24,12 @@ const resolvers = {
     updateUser: async (_, { id, input }) => userCtrl.updateUser(id, input),
     deleteUser: async (_, { id }) => userCtrl.deleteUser(id),
     // Project
-    newProject: async (_, { input }) => projectCtrl.getProject(input),
+    newProject: async (_, { input }) => projectCtrl.newProject(input),
     updateProject: async (_, { id, input }) => projectCtrl.updateProject(id, input),
     deleteProject: async (_, { id }) => projectCtrl.deleteProject(id),
 
     // Incription
-    newInscription: async (_, { input }) => inscriptionCtrl.getInscription(input),
+    newInscription: async (_, { input }) => inscriptionCtrl.newInscription(input),
     updateInscription: async (_, { id, input }) => inscriptionCtrl.updateInscription(id, input),
     deleteInscription: async (_, { id }) => inscriptionCtrl.deleteInscription(id),
   },
