@@ -20,6 +20,7 @@ Se definen los metodos de crear, listar, eliminar y actualizar para interactuar 
 
 Se realizan pruebas mediante la utilización de la herramienta Graphql y se verifica su creación en MongoDB.
 
+---
 
 - ✅ **Integrantes del equipo y roles:**
     1.   Jose David Fontalvo - Administrador de BD
