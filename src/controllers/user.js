@@ -48,7 +48,7 @@ async function newUser(input) {
   input.password = await bcrypt.hash(password, salt);
   try {
     // Guardarlo en la base de datos
-    const user = new User(register);
+    const user = new User(input);
     user.save(); // guardarlo en la DB
     return user;
   } catch (error) {
