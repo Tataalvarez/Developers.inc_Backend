@@ -2,6 +2,9 @@
 
 Proyecto desarrollado por el grupo de trabajo Developers.inc
 
+https://trello.com/b/ohJQ6dLT/developer-inc
+
+
 ---
 
 -------------------------------------------- SPRINT 2 ------------------------------------------------
