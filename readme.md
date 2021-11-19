@@ -2,15 +2,35 @@
 
 Proyecto desarrollado por el grupo de trabajo Developers.inc
 
+https://trello.com/b/ohJQ6dLT/developer-inc
+
+
+---
+
+-------------------------------------------- SPRINT 2 ------------------------------------------------
+
+Se define la estructura del proyecto de Backend "Developers. inc".
+
+Se instala, configura y se prueba el servidor de express.
+
+Se definen las rutas asociadas al CRUD de Usuarios, Proyectos, Inscripciones y Avances.
+
+Se definen los controladores asociados al CRUD Usuarios, Proyectos, Inscripciones y Avances.
+
+Se Configura Mongodb.
+
+Se definen los metodos de crear, listar, eliminar y actualizar para interactuar con la Base de Datos MongoDB.
+
+Se realizan pruebas mediante la utilización de la herramienta Graphql y se verifica su creación en MongoDB.
+
 ---
 
 - ✅ **Integrantes del equipo y roles:**
-    1.   Jose David Fontalvo - 
-    2.   Paulo Richar Mora Noguera -
-    3. 
-    4.  
-    5.  Marco Fabian Piñeros Hernández - Developer
-
+    1.   Jose David Fontalvo - Administrador de BD
+    2.   Paulo Richar Mora Noguera - Scrum master
+    3.   Jorge Augusto Jaramillo Jaramillo - Desarrollador
+    4.   Jully Tatiana Alvarez - Analista
+    5.   Marco Fabian Piñeros Hernández - Product Owner
 ---
 
 ## **Descripcion del proyecto**
@@ -64,7 +84,9 @@ Soy estudiante de Ingeniería de Sistemas de 6to semestre, en la Universidad Cat
 
 El aprendizaje autonomo es mi fuerte y en esta serie de cursos he explorado y alcanzado competencias que no habia podido desempeñar por multiples ocupaciones. Mintic me dio la posibilidad de meterme de lleno en este tema tan apasionante del desarrollo web y en lo que he recorrido, he descubierto que este mundo me apasiona, por ello, me he dedicado con la convicción de ser en un futuro cercano un desarrollador capaz de diseñar y sacar adelante cualquier proyecto en el que pueda colaborar. 
 
--**** - []()
+-**Jorge Augusto Jaramillo Jaramillo** - [JorgeAJaramillo]()
+
+Soy Medico Veterinario Zootecnista, egresado de la Universidad de Caldas, vivo en Manizales - Caldas. Ingrese al programa MisionTic para poder ampliar mis conocimientos en el area de Programación, ya que siempre me ha interesado y nunca tuve la oportunidad hasta este momento.
 
 -**** - []()
 
