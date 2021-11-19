@@ -4,7 +4,7 @@ Proyecto desarrollado por el grupo de trabajo Developers.inc
 
 ---
 
--------------------------------------------- SPRINT 3 ---- --------------------------------------------
+-------------------------------------------- SPRINT 2 ------------------------------------------------
 
 Se define la estructura del proyecto de Backend "Developers. inc".
 
