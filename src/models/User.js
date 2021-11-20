@@ -18,8 +18,11 @@ const UserSchema = mongoose.Schema({
   },
   estado: {
     type: String,
+    default: "Pendiente",
+  },
+  rol: {
+    type: String,
     required: true,
-    default: "Pendiente"
   },
   email: {
     type: String,
