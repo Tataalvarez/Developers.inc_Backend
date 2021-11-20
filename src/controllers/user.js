@@ -5,8 +5,8 @@ require("dotenv").config({ path: "variables.env" });
 
 const crearToken = (user, secreta, expiresIn) => {
   // console.log(user);
-  const { id, nombre, apellido, email, estado } = user;
-  return jwt.sign({ id, nombre, apellido, email, estado }, secreta, {
+  const { id, nombre, apellido, identificacion, email, rol, estado, creado } = user;
+  return jwt.sign({ id, nombre, apellido, identificacion, email, rol, estado, creado }, secreta, {
     expiresIn,
   });
 };
