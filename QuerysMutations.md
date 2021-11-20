@@ -119,8 +119,8 @@ Variables:
 }
 ```
 
-
-**Advances:**
+```
+**AVANCES:**
 ```
 ***Obtener un Avance (getAdvance)***
 ```
