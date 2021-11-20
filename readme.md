@@ -11,7 +11,7 @@ https://trello.com/b/ohJQ6dLT/developer-inc
 
 Se define la estructura del proyecto de Backend "Developers. inc".
 
-Se instala, configura y se prueba el servidor de express.
+Se instala, configura y se prueba el servidor Apollo-server.
 
 Se definen las rutas asociadas al CRUD de Usuarios, Proyectos, Inscripciones y Avances.
 
