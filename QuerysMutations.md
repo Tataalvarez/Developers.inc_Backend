@@ -120,8 +120,7 @@ Variables:
 ```
 
 ```
-***AVANCES:***
-```
+**AVANCES**
 ***Obtener un Avance (getAdvance)***
 ```
 query getAdvance($getAdvanceId: ID!,){
