@@ -119,7 +119,7 @@ Variables:
 }
 ```
 
-```
+
 **AVANCES**
 ***Obtener un Avance (getAdvance)***
 ```
