@@ -120,7 +120,7 @@ Variables:
 ```
 
 ```
-**AVANCES:**
+***AVANCES:***
 ```
 ***Obtener un Avance (getAdvance)***
 ```
