@@ -122,6 +122,8 @@ Variables:
 
 **Advances:**
 ```
+***Obtener un Avance (getAdvance)***
+```
 query getAdvance($getAdvanceId: ID!,){
   getAdvance(id: $getAdvanceId) {
     id
@@ -131,7 +133,9 @@ query getAdvance($getAdvanceId: ID!,){
     creadoPor
   } 
 }
-
+```
+***Obtener todos los Avances (getAdvances)***
+```
 query getAdvances {
   getAdvances {
     id
@@ -141,7 +145,9 @@ query getAdvances {
     creadoPor
   } 
 }
-
+```
+***Nuevo Avance (newAdvance)***
+```
 mutation newAdvance($input: AdvanceInput){
   newAdvance(input: $input) {
     id
@@ -151,7 +157,9 @@ mutation newAdvance($input: AdvanceInput){
     creadoPor
   }
 }
-
+```
+***Actualizar o editar Avance (updateAdvance)***
+```
 mutation updateAdvance($input: AdvanceInput, $id: ID!, ){
   updateAdvance(input: $input, id: $id,) {
     id
@@ -161,7 +169,9 @@ mutation updateAdvance($input: AdvanceInput, $id: ID!, ){
     creadoPor
   }
 }
-
+```
+***Eliminar un Avance (deleteAdvance)***
+```
 mutation deleteAdvance($id: ID!,){
   deleteAdvance(id: $id, ) 
 }
