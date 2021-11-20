@@ -18,14 +18,27 @@ const typeDefs = gql`
   type Project {
     id: ID
     titulo: String
-    objGenerales: String
+    objetivos: [Objetivos]
     presupuesto: Int
-    dniLider: String
-    nombreLider: String
+    Lider: Lider
     estado: String
     fase: String
-    creado: String
-    duracion: Int
+    fecha: Fecha
+  }
+  type Objetivos {
+    generales: String
+    especificos: String
+    proyecto: ID
+  }
+  type Lider {
+    nombre: String
+    identificacion: String
+    proyecto: ID
+  }
+  type Fecha {
+    inicial: String
+    final: String
+    proyecto: ID
   }
 
   type Inscription {
@@ -60,14 +73,16 @@ const typeDefs = gql`
   }
   input ProjectInput {
     titulo: String!
-    objGenerales: String
+    objetivo: String
     presupuesto: Int
-    dniLider: String!
-    nombreLider: String!
+    lider: LiderInput!
     estado: String
     fase: String
-    creado: String
-    duracion: Int
+    fecha: String
+  }
+  input LiderInput {
+    nombre: String
+    identificacion: String
   }
 
   input InscriptionInput {
@@ -84,6 +99,16 @@ const typeDefs = gql`
     observaciones: String
     proyecto: String!
     creadoPor: String! 
+  }
+  enum EstadoProject {
+    INICIADO
+    EN_DESARROLLO
+    TERMINADO
+  }
+  enum RolUser {
+    ESTUDIANTE
+    LIDER
+    ADMINISTRADOR
   }
 
   type Query {

@@ -27,6 +27,7 @@ const resolvers = {
     deleteUser: async (_, { id }) => userCtrl.deleteUser(id),
     // Project
     newProject: async (_, { input }) => projectCtrl.newProject(input),
+    newLider: async (_, { input }) => liderCtrl.newLider(input),
     updateProject: async (_, { id, input }) => projectCtrl.updateProject(id, input),
     deleteProject: async (_, { id }) => projectCtrl.deleteProject(id),
 
