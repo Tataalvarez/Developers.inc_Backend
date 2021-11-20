@@ -1,7 +1,7 @@
-----------------------------------------------  Sprint 2 -----------------------------------------------
+***----------------------------------------------  Sprint 2 -----------------------------------------------***
 
 **Advances:**
-
+```
 query getAdvance($getAdvanceId: ID!,){
   getAdvance(id: $getAdvanceId) {
     id
@@ -45,3 +45,4 @@ mutation updateAdvance($input: AdvanceInput, $id: ID!, ){
 mutation deleteAdvance($id: ID!,){
   deleteAdvance(id: $id, ) 
 }
+```
