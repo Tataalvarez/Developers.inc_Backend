@@ -19,7 +19,7 @@ const InscriptionsSchema = mongoose.Schema({
     },
     fecha_egreso: {
         type: Date,
-        default: Date.now()
+        default: Date
     }
 });
 
