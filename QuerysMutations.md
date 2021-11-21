@@ -175,3 +175,59 @@ mutation deleteAdvance($id: ID!,){
   deleteAdvance(id: $id, ) 
 }
 ```
+
+**INSCRIPCIONES**
+***Obtener una Inscripción (getInscription)***
+```
+query getInscription($getInscriptionId: ID!,){
+  getInscription(id: $getInscriptionId) {
+    id
+    descripcion
+    observaciones
+    proyecto
+    creadoPor
+  } 
+}
+```
+***Obtener todos los Avances (getAdvances)***
+```
+query getInscriptions {
+  getInscriptions {
+    id
+    identificador_estudiante
+    identificador_proyecto
+    estado
+    fecha_ingreso
+    fecha_ingreso
+  } 
+}
+```
+***Nuevo Inscripción (newAdvance)***
+```
+mutation newInscription($input: InscriptionInput){
+  newAInscriptioninput: $input) {
+    id
+    identificador_estudiante
+    identificador_proyecto
+  }
+}
+```
+***Actualizar o editar Inscripción (updateInscription)***
+```
+mutation InscriptionAdvance($input: InscriptionInput, $id: ID!, ){
+  Inscriptiondvance(input: $input, id: $id,) {
+    id
+    identificador_estudiante
+    identificador_proyecto
+    estado
+    fecha_ingreso
+    fecha_ingreso
+  }
+}
+```
+***Eliminar un Inscripción (deleteInscription)***
+```
+mutation deleteInscription($id: ID!,){
+  deleteInscription(id: $id, ) 
+}
+```
