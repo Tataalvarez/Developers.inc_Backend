@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server');
+const { gql } = require("apollo-server");
 
 // Schema
 const typeDefs = gql`
@@ -7,10 +7,10 @@ const typeDefs = gql`
     nombre: String
     apellido: String
     identificacion: String
-    rol: String
+    # rol: EnumRolUser
     email: String
-    estado: String
-    creado: String
+    # estado: EnumEstadoUser
+    createdAt: String
   }
   type Token {
     token: String
@@ -18,27 +18,22 @@ const typeDefs = gql`
   type Project {
     id: ID
     titulo: String
-    objetivos: [Objetivos]
+    objetivos: Objetivos
     presupuesto: Int
-    Lider: Lider
-    estado: String
+    Lider: User
+    estado: EnumEstadoProject
     fase: String
     fecha: Fecha
   }
   type Objetivos {
     generales: String
     especificos: String
-    proyecto: ID
-  }
-  type Lider {
-    nombre: String
-    identificacion: String
-    proyecto: ID
+    projectId: ID
   }
   type Fecha {
     inicial: String
     final: String
-    proyecto: ID
+    projectId: ID
   }
 
   type Inscription {
@@ -60,12 +55,12 @@ const typeDefs = gql`
   }
 
   input UserInput {
-    nombre: String!
-    apellido: String!
-    identificacion: String!
-    rol: String!
-    email: String!
-    password: String!
+    nombre: String
+    apellido: String
+    identificacion: String
+    # rol: EnumRolUser
+    email: String
+    password: String
   }
   input AuthInput {
     email: String!
@@ -73,16 +68,20 @@ const typeDefs = gql`
   }
   input ProjectInput {
     titulo: String!
-    objetivo: String
+    objetivos: ObjetivosInput
     presupuesto: Int
-    lider: LiderInput!
-    estado: String
-    fase: String
-    fecha: String
+    lider: UserInput
+    estado: EnumEstadoProject
+    fase: EnumFaseProject
+    fecha: FechaInput
   }
-  input LiderInput {
-    nombre: String
-    identificacion: String
+  input ObjetivosInput {
+    generales: String
+    especificos: String
+  }
+  input FechaInput {
+    inicial: String
+    final: String
   }
 
   input InscriptionInput {
@@ -98,17 +97,26 @@ const typeDefs = gql`
     descripcion: String
     observaciones: String
     proyecto: String!
-    creadoPor: String! 
+    creadoPor: String!
   }
-  enum EstadoProject {
-    INICIADO
-    EN_DESARROLLO
-    TERMINADO
+  enum EnumEstadoProject {
+    Activo
+    InActivo
   }
-  enum RolUser {
-    ESTUDIANTE
-    LIDER
-    ADMINISTRADOR
+  enum EnumFaseProject {
+    Iniciado
+    EnDesarrollo
+    Terminado
+  }
+  enum EnumRolUser {
+    Estudiante
+    Lider
+    Administrador
+  }
+  enum EnumEstadoUser {
+    Pendiente
+    Autorizado
+    NoAutrizado
   }
 
   type Query {

@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const Objetivos = require('./Objetivos');
 
 const ProjectSchema = mongoose.Schema({
   titulo: {
@@ -10,6 +9,7 @@ const ProjectSchema = mongoose.Schema({
   objetivos: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "Objetivos",
+    trim: true,
   },
   presupuesto: {
     type: Number,
@@ -17,11 +17,11 @@ const ProjectSchema = mongoose.Schema({
   },
   lider: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: "Lider",
+    ref: "User",
   },
   estado: {
     type: String,
-    default: "PENDIENTE"
+    default: "InActivo"
   },
   fase: {
     type: String,
