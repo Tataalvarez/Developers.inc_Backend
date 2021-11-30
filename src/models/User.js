@@ -18,11 +18,14 @@ const UserSchema = mongoose.Schema({
   },
   estado: {
     type: String,
-    default: "Pendiente",
+    enum: ["PENDIENTE", "AUTORIZADO", "NO_AUTORIZADO"],
+    default: "PENDIENTE"
   },
   rol: {
     type: String,
-    required: true,
+    required: false,
+    enum: ["PENDIENTE", "AUTORIZADO", "NO_AUTORIZADO"],
+    default: "PENDIENTE"
   },
   email: {
     type: String,
@@ -35,10 +38,13 @@ const UserSchema = mongoose.Schema({
     required: true,
     trim: true
   },
-  creado: {
+  createdAt: {
     type: Date,
     default: Date.now()
-  }
+  },
+  updatedAt: {
+    type: Date,
+  },
 });
 
 module.exports = mongoose.model('User', UserSchema);

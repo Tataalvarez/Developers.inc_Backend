@@ -6,43 +6,31 @@ const ProjectSchema = mongoose.Schema({
     required: true,
     trim: true
   },
-  objGenerales: {
-    type: String,
-    trim: true
-  },
-  objEspecificos: {
-    type: String,
-    trim: true
+  objetivos: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Objetivos",
+    trim: true,
   },
   presupuesto: {
     type: Number,
     required: true
   },
-  creacion: {
-    type: Date,
-    default: Date.now()
-  },
-  duracion: {
-    type: Number
-  },
-  dniLider: {
-    type: String,
-    required: true,
-    trim: true
-  },
-  nombreLider: {
-    type: String,
-    required: true,
-    trim: true
+  lider: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
   },
   estado: {
-    type: Boolean,
-    default: false
+    type: String,
+    default: "InActivo"
   },
   fase: {
     type: String,
     default: null,
     trim: true
+  },
+  fecha: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Fecha",
   }
 });
 

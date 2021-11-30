@@ -8,6 +8,10 @@ conectarDB();
 
 // Servidor
 const server = new ApolloServer({
+  cors: {
+    origin: '*',
+    credentials: true
+  },
   typeDefs,
   resolvers
 });
