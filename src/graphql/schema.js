@@ -7,9 +7,9 @@ const typeDefs = gql`
     nombre: String
     apellido: String
     identificacion: String
-    # rol: EnumRolUser
+    rol: RolUser
     email: String
-    # estado: EnumEstadoUser
+    estado: EstadoUser
     createdAt: String
   }
   type Token {
@@ -21,19 +21,18 @@ const typeDefs = gql`
     objetivos: Objetivos
     presupuesto: Int
     Lider: User
-    estado: EnumEstadoProject
-    fase: String
-    fecha: Fecha
+    estado: EstadoProject
+    fase: FaseProject
+    fecha: Fechas
   }
   type Objetivos {
+    id: ID
     generales: String
     especificos: String
-    projectId: ID
   }
-  type Fecha {
+  type Fechas {
     inicial: String
     final: String
-    projectId: ID
   }
 
   type Inscription {
@@ -55,12 +54,12 @@ const typeDefs = gql`
   }
 
   input UserInput {
-    nombre: String
-    apellido: String
-    identificacion: String
-    # rol: EnumRolUser
-    email: String
-    password: String
+    nombre: String!
+    apellido: String!
+    identificacion: String!
+    rol: RolUser
+    email: String!
+    password: String!
   }
   input AuthInput {
     email: String!
@@ -71,8 +70,8 @@ const typeDefs = gql`
     objetivos: ObjetivosInput
     presupuesto: Int
     lider: UserInput
-    estado: EnumEstadoProject
-    fase: EnumFaseProject
+    estado: EstadoProject
+    fase: FaseProject
     fecha: FechaInput
   }
   input ObjetivosInput {
@@ -99,24 +98,24 @@ const typeDefs = gql`
     proyecto: String!
     creadoPor: String!
   }
-  enum EnumEstadoProject {
-    Activo
-    InActivo
+  enum EstadoProject {
+    ACTIVO
+    INACTIVO
   }
-  enum EnumFaseProject {
-    Iniciado
-    EnDesarrollo
-    Terminado
+  enum FaseProject {
+    INICIADO
+    ENDESARROLLO
+    TERMINADO
   }
-  enum EnumRolUser {
-    Estudiante
-    Lider
-    Administrador
+  enum RolUser {
+    ESTUDIANTE
+    LIDER
+    ADMINISTRADOR
   }
-  enum EnumEstadoUser {
-    Pendiente
-    Autorizado
-    NoAutrizado
+  enum EstadoUser {
+    PENDIENTE
+    AUTORIZADO
+    NOAUTORIZADO
   }
 
   type Query {

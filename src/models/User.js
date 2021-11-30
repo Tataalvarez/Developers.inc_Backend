@@ -23,6 +23,7 @@ const UserSchema = mongoose.Schema({
   },
   rol: {
     type: String,
+    required: false,
     enum: ["PENDIENTE", "AUTORIZADO", "NO_AUTORIZADO"],
     default: "PENDIENTE"
   },
