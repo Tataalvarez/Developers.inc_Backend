@@ -1,4 +1,4 @@
-const { gql } = require('apollo-server');
+const { gql } = require("apollo-server");
 
 // Schema
 const typeDefs = gql`
@@ -7,10 +7,10 @@ const typeDefs = gql`
     nombre: String
     apellido: String
     identificacion: String
-    rol: String
+    rol: RolUser
     email: String
-    estado: String
-    creado: String
+    estado: EstadoUser
+    createdAt: String
   }
   type Token {
     token: String
@@ -18,14 +18,21 @@ const typeDefs = gql`
   type Project {
     id: ID
     titulo: String
-    objGenerales: String
+    objetivos: Objetivos
     presupuesto: Int
-    dniLider: String
-    nombreLider: String
-    estado: String
-    fase: String
-    creado: String
-    duracion: Int
+    Lider: User
+    estado: EstadoProject
+    fase: FaseProject
+    fecha: Fechas
+  }
+  type Objetivos {
+    id: ID
+    generales: String
+    especificos: String
+  }
+  type Fechas {
+    inicial: String
+    final: String
   }
 
   type Inscription {
@@ -50,7 +57,7 @@ const typeDefs = gql`
     nombre: String!
     apellido: String!
     identificacion: String!
-    rol: String!
+    rol: RolUser
     email: String!
     password: String!
   }
@@ -60,14 +67,20 @@ const typeDefs = gql`
   }
   input ProjectInput {
     titulo: String!
-    objGenerales: String
+    objetivos: ObjetivosInput
     presupuesto: Int
-    dniLider: String!
-    nombreLider: String!
-    estado: String
-    fase: String
-    creado: String
-    duracion: Int
+    lider: UserInput
+    estado: EstadoProject
+    fase: FaseProject
+    fecha: FechaInput
+  }
+  input ObjetivosInput {
+    generales: String
+    especificos: String
+  }
+  input FechaInput {
+    inicial: String
+    final: String
   }
 
   input InscriptionInput {
@@ -83,7 +96,26 @@ const typeDefs = gql`
     descripcion: String
     observaciones: String
     proyecto: String!
-    creadoPor: String! 
+    creadoPor: String!
+  }
+  enum EstadoProject {
+    ACTIVO
+    INACTIVO
+  }
+  enum FaseProject {
+    INICIADO
+    ENDESARROLLO
+    TERMINADO
+  }
+  enum RolUser {
+    ESTUDIANTE
+    LIDER
+    ADMINISTRADOR
+  }
+  enum EstadoUser {
+    PENDIENTE
+    AUTORIZADO
+    NOAUTORIZADO
   }
 
   type Query {

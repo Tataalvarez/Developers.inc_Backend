@@ -1,6 +1,7 @@
 ***----------------------------------------------  Sprint 2 -----------------------------------------------***
 
 **USUARIOS**
+
 ***Obtener todos los Usuarios (getUsers)***
 ```
 query getUsers {
@@ -116,6 +117,23 @@ mutation deleteUser($deleteUserId: ID!) {
 Variables:
 {
   "deleteUserId": "61985c2e814890fc61dc5d44"
+}
+```
+**PROYECTOS**
+
+***Obtener todos los Proyectos (getProjects)***
+```
+query getProjects {
+  getProjects {
+    id
+    nombre
+    apellido
+    identificacion
+    rol
+    email
+    estado
+    creado
+  }
 }
 ```
 
