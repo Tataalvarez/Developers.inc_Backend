@@ -68,7 +68,7 @@ const typeDefs = gql`
     identificacionLider: String!
     estado: EstadoProject
     fase: FaseProject
-    fechaInicil: String
+    fechaInicial: String
     fechaFinal: String
   }
 
