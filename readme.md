@@ -31,6 +31,7 @@ Se realizan pruebas mediante la utilización de la herramienta Graphql y se veri
     3.   Jorge Augusto Jaramillo Jaramillo - Desarrollador
     4.   Jully Tatiana Alvarez - Analista
     5.   Marco Fabian Piñeros Hernández - Product Owner
+    6.   Alberto Matute Makacio - Desarrollador
 ---
 
 ## **Descripcion del proyecto**
