@@ -4,7 +4,7 @@ const UserSchema = mongoose.Schema({
   nombre: {
     type: String,
     required: true,
-    trim: true
+    trim: true,
   },
   apellido: {
     type: String,
@@ -19,28 +19,27 @@ const UserSchema = mongoose.Schema({
   estado: {
     type: String,
     enum: ["PENDIENTE", "AUTORIZADO", "NO_AUTORIZADO"],
-    default: "PENDIENTE"
+    default: "PENDIENTE",
   },
   rol: {
     type: String,
-    required: false,
-    enum: ["PENDIENTE", "AUTORIZADO", "NO_AUTORIZADO"],
-    default: "PENDIENTE"
+    required: true,
+    enum: ["ESTUDIANTE", "LIDER", "ADMINISTRADOR"],
   },
   email: {
     type: String,
     required: true,
     trim: true,
-    unique: true
+    unique: true,
   },
   password: {
     type: String,
     required: true,
-    trim: true
+    trim: true,
   },
   createdAt: {
     type: Date,
-    default: Date.now()
+    default: Date.now(),
   },
   updatedAt: {
     type: Date,

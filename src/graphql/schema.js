@@ -51,7 +51,7 @@ const typeDefs = gql`
     nombre: String!
     apellido: String!
     identificacion: String!
-    rol: RolUser
+    rol: RolUser!
     email: String!
     password: String!
   }
