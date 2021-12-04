@@ -4,6 +4,15 @@ Proyecto desarrollado por el grupo de trabajo Developers.inc
 
 https://trello.com/b/ohJQ6dLT/developer-inc
 
+---
+
+-------------------------------------------- SPRINT 3 ------------------------------------------------
+
+Para la consecución del Sprint 3 se realizan las tareas derivadas de las historias de usuarios 
+
+relacionadas con el backend y se hace la respectiva integración con la base de datos en MongoDB.
+
+Para dichos procesos se utilizo Nodejs, Apolo Server y GraphQl.
 
 ---
 
