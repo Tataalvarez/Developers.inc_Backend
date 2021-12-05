@@ -107,6 +107,11 @@ const typeDefs = gql`
     AUTORIZADO
     NOAUTORIZADO
   }
+  
+  enum EstadoIncription{
+    ACEPTADA 
+    RECHAZADA
+  }
 
   type Query {
     # Users
