@@ -11,11 +11,12 @@ const InscriptionsSchema = mongoose.Schema({
     },
     estado: {
         type: Boolean,
-        default: false
+        enum: ["ACEPTADA", "RECHAZADA"],
+        default: "RECHAZADA"
     },
     fecha_ingreso: {
         type: Date,
-        default: Date.now()
+        default: Date
     },
     fecha_egreso: {
         type: Date,
@@ -24,3 +25,4 @@ const InscriptionsSchema = mongoose.Schema({
 });
 
 module.exports = mongoose.model('Inscription', InscriptionsSchema);
+
