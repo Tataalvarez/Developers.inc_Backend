@@ -72,14 +72,14 @@ const typeDefs = gql`
     fechaFinal: String
   }
 
-  input InscriptionInput {
+ input InscriptionInput {
     identificador_estudiante: String!
     identificador_proyecto: String!
-    estado: String
-    fecha_ingreso: String
-    fecha_egreso: String
+    estado: String!
+    fecha_ingreso: String!
+    fecha_egreso: String!
   }
-
+  
   input AdvanceInput {
     fecha: String
     descripcion: String
