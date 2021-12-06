@@ -1,25 +1,26 @@
 const mongoose = require('mongoose');
 
 const InscriptionsSchema = mongoose.Schema({
-    identificador_estudiante: {
-        type: String,
+    estudiante: {
+        type: mongoose.Schema.Types.ObjectId,
         required: true,
+        ref: 'User'
     },
-    identificador_proyecto: {
-        type: String,
+    proyecto: {
+        type: mongoose.Schema.Types.ObjectId,
         required: true,
     },
     estado: {
-        type: Boolean,
-        default: false
+        type: String,
+        enum: ["ACEPTADA", "RECHAZADA"],
+        default: "RECHAZADA",
     },
-    fecha_ingreso: {
+    fechaIngreso: {
         type: Date,
-        default: Date.now()
     },
-    fecha_egreso: {
+    fechaEgreso: {
         type: Date,
-        default: Date
+        default: Date.now(),
     }
 });
 

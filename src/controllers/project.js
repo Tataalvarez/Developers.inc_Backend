@@ -18,6 +18,15 @@ async function getProject(id){
   return project;
 }
 
+async function getProjectsLider(){
+  try {
+    const projects = await Project.find({lider: ctx.user.id});
+    return projects;
+  } catch (error) {
+    console.log(error);
+  }
+}
+
 async function newProject(input) {
   try {
     const project = new Project(input);
@@ -57,6 +66,7 @@ module.exports = {
   // Query
   getProjects,
   getProject,
+  getProjectsLider,
   // Resolvers
   newProject,
   updateProject,

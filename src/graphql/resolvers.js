@@ -12,6 +12,7 @@ const resolvers = {
     // Project
     getProjects: async () => projectCtrl.getProjects(),
     getProject: async (_, { id }) => projectCtrl.getProject(id),
+    getProjectsLider: async (_, {}, ctx) => projectCtrl.getProjectsLider(),
     // Project
     getInscriptions: async () => inscriptionCtrl.getInscriptions(),
     getInscription: async (_, { id }) => inscriptionCtrl.getInscription(id),
@@ -26,7 +27,7 @@ const resolvers = {
     updateUser: async (_, { id, input }) => userCtrl.updateUser(id, input),
     deleteUser: async (_, { id }) => userCtrl.deleteUser(id),
     // Project
-    newProject: async (_, { input }) => projectCtrl.newProject(input),
+    newProject: async (_, { input }, ctx) => projectCtrl.newProject(input),
     updateProject: async (_, { id, input }) => projectCtrl.updateProject(id, input),
     deleteProject: async (_, { id }) => projectCtrl.deleteProject(id),
 

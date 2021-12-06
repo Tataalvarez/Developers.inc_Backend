@@ -7,11 +7,11 @@ const ProjectSchema = mongoose.Schema({
     trim: true
   },
   objGeneral: {
-    type: String,
+    type: Array,
     trim: true,
   },
   objEspecifico: {
-    type: String,
+    type: Array,
     trim: true,
   },
   presupuesto: {
@@ -28,6 +28,13 @@ const ProjectSchema = mongoose.Schema({
     type: String,
     required: true,
     trim: true,
+  },
+  estudiantes: {
+    type: Array,
+  },
+  inscripcion: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Inscription',
   },
   estado: {
     type: String,

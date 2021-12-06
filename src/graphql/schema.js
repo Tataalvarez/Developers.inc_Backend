@@ -18,11 +18,12 @@ const typeDefs = gql`
   type Project {
     id: ID
     titulo: String
-    objGeneral: String
-    objEspecifico: String
+    objGeneral: [String]
+    objEspecifico: [String]
     presupuesto: Int
     nombreLider: String
     identificacionLider: String
+    inscripcion: [Inscription]
     estado: EstadoProject
     fase: FaseProject
     fechaInicial: String
@@ -31,20 +32,20 @@ const typeDefs = gql`
 
   type Inscription {
     id: ID
-    identificador_estudiante: String
-    identificador_proyecto: String
-    estado: String
-    fecha_ingreso: String
-    fecha_egreso: String
+    userId: ID
+    projectId: ID
+    estado: EstadoInscription
+    fechaIngreso: String
+    fechaEgreso: String
   }
 
   type Advance {
     id: ID
     fecha: String
     descripcion: String
-    observaciones: String
-    proyecto: String
-    creadoPor: String
+    observaciones: [String]
+    proyecto: ID
+    creadoPor: ID
   }
 
   input UserInput {
@@ -73,11 +74,11 @@ const typeDefs = gql`
   }
 
   input InscriptionInput {
-    identificador_estudiante: String!
-    identificador_proyecto: String!
-    estado: String
-    fecha_ingreso: String
-    fecha_egreso: String
+    estudiante: ID!
+    proyecto: ID!
+    estado: EstadoInscription
+    fechaIngreso: String
+    fechaEgreso: String
   }
 
   input AdvanceInput {
@@ -107,6 +108,10 @@ const typeDefs = gql`
     AUTORIZADO
     NOAUTORIZADO
   }
+  enum EstadoInscription {
+    ACEPTADA
+    RECHAZADA
+  }
 
   type Query {
     # Users
@@ -115,6 +120,8 @@ const typeDefs = gql`
     # Projects
     getProjects: [Project]
     getProject(id: ID!): Project
+    # Obtener proyectos por lider
+    getProjectsLider: [Project]
     # Inscriptions
     getInscriptions: [Inscription]
     getInscription(id: ID!): Inscription
@@ -124,8 +131,8 @@ const typeDefs = gql`
   }
   type Mutation {
     # Users
-    newUser(input: UserInput): User
     authUser(input: AuthInput): Token
+    newUser(input: UserInput): User
     updateUser(id: ID!, input: UserInput): User
     deleteUser(id: ID!): String
     # Projects

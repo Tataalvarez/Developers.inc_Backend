@@ -9,20 +9,24 @@ const AdvanceSchema = mongoose.Schema({
   descripcion: {
     type: String,
     required: true,
+    trim: true,
   },
 
   observaciones: {
     type: String,
+    trim: true,
   },
 
   proyecto: {
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
     required: true,
+    ref: 'Project',
   },
 
-  creadoPor: {
-    type: String,
+  estudiante: {
+    type: mongoose.Schema.Types.ObjectId,
     required: true,
+    ref: 'User',
   },
 });
 
