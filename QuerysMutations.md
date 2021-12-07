@@ -208,7 +208,7 @@ query getInscription($getInscriptionId: ID!,){
   } 
 }
 ```
-***Obtener todos los Avances (getAdvances)***
+***Obtener todos las Inscripciones (getInscriptions)***
 ```
 query getInscriptions {
   getInscriptions {
@@ -221,7 +221,7 @@ query getInscriptions {
   } 
 }
 ```
-***Nuevo Inscripción (newAdvance)***
+***Nuevo Inscripción (newInscription)***
 ```
 mutation newInscription($input: InscriptionInput){
   newAInscriptioninput: $input) {
