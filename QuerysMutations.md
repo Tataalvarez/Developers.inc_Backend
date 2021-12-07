@@ -199,11 +199,12 @@ mutation deleteAdvance($id: ID!,){
 ```
 query getInscription($getInscriptionId: ID!,){
   getInscription(id: $getInscriptionId) {
-    id
-    descripcion
-    observaciones
-    proyecto
-    creadoPor
+   id
+    identificador_estudiante
+    identificador_proyecto
+    estado
+    fecha_ingreso
+    fecha_ingreso
   } 
 }
 ```
@@ -227,6 +228,9 @@ mutation newInscription($input: InscriptionInput){
     id
     identificador_estudiante
     identificador_proyecto
+    estado
+    fecha_ingreso
+    fecha_ingreso
   }
 }
 ```
