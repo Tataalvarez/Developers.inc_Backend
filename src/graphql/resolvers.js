@@ -8,7 +8,7 @@ const resolvers = {
   Query: {
     // User
     getUsers: async () => userCtrl.getUsers(),
-    getUser: async (_, { token }) => userCtrl.getUser(token),
+    getUser: async (_, { email }) => userCtrl.getUser(email),
     // Project
     getProjects: async () => projectCtrl.getProjects(),
     getProject: async (_, { id }) => projectCtrl.getProject(id),

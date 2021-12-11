@@ -9,7 +9,7 @@ const UserSchema = mongoose.Schema({
   apellido: {
     type: String,
     required: true,
-    trim: true
+    trim: true,
   },
   identificacion: {
     type: String,

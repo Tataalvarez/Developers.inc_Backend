@@ -12,6 +12,7 @@ const crearToken = (user, secreta, expiresIn) => {
 };
 
 // Query
+
 async function getUsers() {
   try {
     const users = await User.find({});
@@ -21,9 +22,14 @@ async function getUsers() {
   }
 }
 
-async function getUser(token) {
-  const userId = await jwt.verify(token, process.env.SECRETA);
-  return userId;
+async function getUser(email) {
+  let user = null;
+  if (email) {
+    user = await User.findOne({ email })
+    return user;
+  }
+  if (!user) throw new Error("El usuario no existe")
+  return user;
 }
 
 // Resolvers
