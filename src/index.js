@@ -1,13 +1,12 @@
+const jwt = require("jsonwebtoken");
 const { ApolloServer } = require("apollo-server");
 const typeDefs = require("./graphql/schema");
 const resolvers = require("./graphql/resolvers");
-const jwt = require('jsonwebtoken');
 const conectarDB = require("./config/db");
 
 // Conectar a la DB
 conectarDB();
 
-// Servidor
 const server = new ApolloServer({
   cors: {
     origin: "*",
@@ -40,6 +39,6 @@ const server = new ApolloServer({
 });
 
 // Arrancar el servidor
-server.listen({ port: process.env.PORT || 4000 }).then( ({url}) => {
-  console.log(`Servidor listo en la URL ${url}`)
-})
+server.listen({ port: process.env.PORT || 4000 }).then(({ url }) => {
+  console.log(`Servidor listo en la URL ${url}`);
+});

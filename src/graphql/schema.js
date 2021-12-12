@@ -49,13 +49,16 @@ const typeDefs = gql`
   }
 
   input UserInput {
-    nombre: String!
-    apellido: String!
-    identificacion: String!
-    rol: RolUser!
-    email: String!
-    password: String!
+    nombre: String
+    apellido: String
+    identificacion: String
+    rol: RolUser
+    email: String
+    password: String
+    currentPassword: String
+    newPassword: String
   }
+
   input AuthInput {
     email: String!
     password: String!
@@ -74,8 +77,8 @@ const typeDefs = gql`
   }
 
   input InscriptionInput {
-    estudiante: ID!
-    proyecto: ID!
+    userId: ID!
+    projectId: ID!
     estado: EstadoInscription
     fechaIngreso: String
     fechaEgreso: String
@@ -85,7 +88,7 @@ const typeDefs = gql`
     fecha: String
     descripcion: String
     observaciones: String
-    proyecto: String!
+    projectId: ID!
     creadoPor: String!
   }
   enum EstadoProject {
@@ -133,7 +136,7 @@ const typeDefs = gql`
     # Users
     authUser(input: AuthInput): Token
     newUser(input: UserInput): User
-    updateUser(id: ID!, input: UserInput): User
+    updateUser(input: UserInput): Boolean
     deleteUser(id: ID!): String
     # Projects
     newProject(input: ProjectInput): Project
