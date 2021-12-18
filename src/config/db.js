@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const PORT = process.variables.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 require('dotenv').config({path: 'variables.env'});
 
 const conectarDB = async () => {
