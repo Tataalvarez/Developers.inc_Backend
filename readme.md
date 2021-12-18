@@ -6,6 +6,7 @@ https://trello.com/b/ohJQ6dLT/developer-inc
 
 ---
 
+
 -------------------------------------------- SPRINT 3 ------------------------------------------------
 
 Para la consecución del Sprint 3 se realizan las tareas derivadas de las historias de usuarios 
@@ -13,6 +14,14 @@ Para la consecución del Sprint 3 se realizan las tareas derivadas de las histor
 relacionadas con el backend y se hace la respectiva integración con la base de datos en MongoDB.
 
 Para dichos procesos se utilizo Nodejs, Apolo Server y GraphQl.
+
+- ✅ **Integrantes del equipo y roles:**
+    1.   Jose David Fontalvo - Administrador de BD
+    2.   Paulo Richar Mora Noguera - Scrum master
+    3.   Jorge Augusto Jaramillo Jaramillo - Desarrollador
+    4.   Jully Tatiana Alvarez - Analista
+    5.   Marco Fabian Piñeros Hernández - Product Owner
+
 
 ---
 
