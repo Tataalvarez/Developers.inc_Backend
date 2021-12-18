@@ -84,8 +84,8 @@ const typeDefs = gql`
     fecha: String
     descripcion: String
     observaciones: String
-    proyecto: String!
-    creadoPor: String!
+    proyecto: String
+    creadoPor: String
   }
   enum EstadoProject {
     ACTIVO

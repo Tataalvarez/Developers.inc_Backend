@@ -3,12 +3,12 @@ const mongoose = require("mongoose");
 const AdvanceSchema = mongoose.Schema({
   fecha: {
     type: Date,
-    default: Date.now(),
+    //default: Date.now(),
   },
 
   descripcion: {
     type: String,
-    required: true,
+    //required: false,
   },
 
   observaciones: {
@@ -17,12 +17,11 @@ const AdvanceSchema = mongoose.Schema({
 
   proyecto: {
     type: String,
-    required: true,
+    //required: false,
   },
 
   creadoPor: {
     type: String,
-    required: true,
   },
 });
 
