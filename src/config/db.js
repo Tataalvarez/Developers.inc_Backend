@@ -1,3 +1,5 @@
+const PORT = process.env.PORT || 3000;
+
 const mongoose = require('mongoose');
 require('dotenv').config({path: 'variables.env'});
 
@@ -13,6 +15,8 @@ const conectarDB = async () => {
     console.log(error);
     process.exit(1) // detener la aplicacion
   }
+
+
 }
 
 module.exports = conectarDB;
